@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 router.post('/api/burgers', (req, res) => {
     let burgerName = req.body.burger_name;
-    burger.insert('burger_name', burgerName, (result) => {
+    burger.insert('burgerName', burgerName, (result) => {
         res.json({ id: result.insertId });
     });
 });
