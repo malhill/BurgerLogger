@@ -6,13 +6,14 @@ const allInOne = {
         const stringQuery = 'SELECT * FROM ' + tableName + ";";
         connection.query(stringQuery, (err, result) => {
         if (err) throw (err);
+        cb(result);
         });
     },
     insertOne: (tableName, column, value, cb) => {
         const stringQuery = `INSERT INTO ${tableName} (${column}, devoured) VALUES ("${value}", 0);`;
         connection.query(stringQuery, (err, result) => {
         if (err) throw err;
-        cb(result)
+        cb(result);
         });
     },
     updateOne: (tableName, column, condition, value, cb) => {
