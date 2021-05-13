@@ -20,9 +20,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/api/burgers', (req, res) => {
-    let burgerName = req.body.burger_name;
-    burger.insert('burgerName', burgerName, (result) => {
-        res.json({ id: result.insertId });
+    burger.insertOne('burgerName', req.body.burgerName, (result) => {
+        console.log(result);
+        res.json({ id: 'well get there!!!' });
     });
 });
 

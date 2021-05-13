@@ -19,6 +19,15 @@
   {{/each}}
 </ul>
 
+<li>
+    {{burger_name}}
+    {{#if devoured}}
+    <button class="change-devoured btn btn-outline-danger" data-id="{{id}}" data-devoured="{{devoured}}">
+        Eat Me!
+        {{/if}}
+    </button>
+</li>
+
 <div class="card-body ml-5">
   <div class="card text-center">
 
